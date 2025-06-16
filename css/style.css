@@ -213,7 +213,36 @@ main {
 .service-card[style*="background-image"] .card-text {
     color: rgba(255, 255, 255, 0.85);
 }
+/* Styles for Service Card Pagination */
+.service-card-item {
+    display: none; /* Initially hide all cards; JS will show the correct ones */
+}
 
+.service-card-item.active {
+    display: flex !important; /* Use !important to override Bootstrap's d-flex if needed, or ensure specificity */
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+.pagination .page-link {
+    color: var(--accent-orange); /* Or your primary color */
+}
+
+.pagination .page-link:hover {
+    color: #F57C00; /* Darker orange */
+}
+
+.pagination .page-item.active .page-link { /* If you add active page number styling */
+    z-index: 3;
+    color: #fff;
+    background-color: var(--accent-orange);
+    border-color: var(--accent-orange);
+}
 
 
 #contact {
